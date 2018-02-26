@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>金选集 404</title>
+    <meta name="Keywords" content="金选集,jinxuanji,jinxuanji.com 微信,公众号,手机,小程序,网站,产品目录,产品集,产品库,产品管理,产品手册,电子合同,电子说明书,素材库,图片库,图片包,样本,样品,展示,系统,开发,维护,更新,上架,代运营,推广,排版,编辑,客户,外贸,批发,分销,报价,价格表,表格,统计,对账" />
+    <meta name="Description" content="展示产品 触达客户，你需要的软件和人工服务。" />
+    <meta name="author" content="jinxuanji"/>
+    <meta name="copyright" content="jinxuanji.com"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv=refresh content="10;url=index.html">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="bookmark" href="favicon.ico" />
+    <link href="images/mini-logo.png" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" media="all" href="Styles/Common.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="Styles/Stylesheet.css" />
+    <link href="Styles/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="Styles/bass.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/iconfont1.css">
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+</head>
+<body>
+<div class="error-page">
+    <img src="images/404.png">
+</div>
+<div class="container-j">
+    <p class="error-p f_weight_700 text_center">诶呀！ 您要找的页面被外星人劫走了...</p>
+    <div>
+        <a href="magazine.html" class="f_weight_500 error-a">再去逛逛其他文章 <i class="iconfont icon-jiantou2 p18"></i></a>
+        <p id="jumping" class="f_weight_500"><i>10</i> 秒后跳转到金选集主页</p>
+    </div>
+</div>
+
+<!--手机登录跳转-->
+<script language="javascript">
+    jumpToMobile('http://www.jinxuanji.com/mobile/404.html')
+</script>
+
+<script type="text/javascript">
+    var timer;
+    var $jumoing = $("#jumping");
+    var num = 10;
+    timer = setInterval(function () {
+        $jumoing.html("<i>"+num+"</i> 秒后跳转到金选集主页");
+        num = num-1;
+        console.log(num);
+    },1000);
+    if(num === 0){
+        clearInterval(timer);
+    }
+</script>
+</body>
+</html>

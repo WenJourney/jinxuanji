@@ -1,0 +1,483 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rule, hr {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+
+
+
+
+
+input[type="text"],
+#adv_code_search .search-page-label,
+input[type="password"],
+input[type="email"],
+textarea {
+    padding:7px 8px;
+    outline:none;
+    color:#333;
+    background-color:#fff;
+    background-repeat:no-repeat;
+    background-position:right center;
+    border:1px solid #ccc;
+    border-radius:3px;
+    box-shadow:inset 0 1px 2px rgba(0,0,0,0.075);
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-transition:all 0.15s ease-in 0;
+    -webkit-transition:all 0.15s ease-in 0;
+    vertical-align:middle
+}
+input[type="text"].focus,
+#adv_code_search .focus.search-page-label,
+input[type="text"]:focus,
+#adv_code_search .search-page-label:focus,
+input[type="password"].focus,
+input[type="password"]:focus,
+input[type="email"].focus,
+input[type="email"]:focus,
+textarea.focus,
+textarea:focus {
+    border-color:#51a7e8;
+    box-shadow:inset 0 1px 2px rgba(0,0,0,0.075),0 0 5px rgba(81,167,232,0.5)
+}
+dl.form input[type="text"],dl.form #adv_code_search .search-page-label,#adv_code_search dl.form .search-page-label,dl.form input[type="password"],dl.form input[type="email"],dl.form textarea {
+    background-color:#fafafa
+}
+dl.form input[type="text"]:focus,dl.form #adv_code_search .search-page-label:focus,#adv_code_search dl.form .search-page-label:focus,dl.form input[type="password"]:focus,dl.form input[type="email"]:focus,dl.form textarea:focus {
+    background-color:#fff
+}
+
+
+
+
+
+
+
+
+
+.button,
+.minibutton {
+    position:relative;
+    display:inline-block;
+    padding:8px 15px 7px;
+    font-size:13px;
+    font-weight:bold;
+    color:#333;
+    text-shadow:0 1px 0 rgba(255,255,255,0.9);
+    white-space:nowrap;
+    background-color:#eaeaea;
+    background-image:-moz-linear-gradient(#fafafa,#eaeaea);
+    background-image:-webkit-linear-gradient(#fafafa,#eaeaea);
+    background-image:linear-gradient(#fafafa,#eaeaea);
+    background-repeat:repeat-x;
+    border-radius:3px;
+    border:1px solid #ddd;
+    border-bottom-color:#c5c5c5;
+    box-shadow:0 1px 3px rgba(0,0,0,0.075);
+    vertical-align:middle;
+    cursor:pointer;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+.button:hover,.button:active,.minibutton:hover,.button-group .grouped-button:hover,.minibutton:active {
+    color:#fff;
+    text-decoration:none;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+    background-color:#3072b3;
+    background-image:-moz-linear-gradient(#599bcd,#3072b3);
+    background-image:-webkit-linear-gradient(#599bcd,#3072b3);
+    background-image:linear-gradient(#599bcd,#3072b3);
+    background-repeat:repeat-x;
+    border-color:#2a65a0
+}
+.button:active,.minibutton:active {
+    background-color:#3072b3;
+    background-image:none;
+    border-color:#25588c;
+    box-shadow:inset 0 3px 5px rgba(0,0,0,0.15)
+}
+.button:disabled,
+.button:disabled:hover,
+.button.disabled,
+.button.disabled:hover,
+.minibutton:disabled,
+.minibutton:disabled:hover,
+.button-group .grouped-button:disabled:hover,
+.minibutton.disabled,
+.minibutton.disabled:hover,
+.button-group .disabled.grouped-button:hover {
+    opacity:.5;
+    color:#666;
+    text-shadow:0 1px 0 rgba(255,255,255,0.9);
+    background-image:none;
+    background-color:#e5e5e5;
+    border-color:#c5c5c5;
+    cursor:default
+}
+.button.primary,
+.minibutton.primary {
+    color:#fff;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+    background-color:#60b044;
+    background-image:-moz-linear-gradient(#8add6d,#60b044);
+    background-image:-webkit-linear-gradient(#8add6d,#60b044);
+    background-image:linear-gradient(#8add6d,#60b044);
+    background-repeat:repeat-x;
+    border-color:#5ca941
+}
+.button.primary:hover,
+.minibutton.primary:hover,
+.button-group .primary.grouped-button:hover {
+    color:#fff;
+    background-color:#5ba740;
+    background-image:-moz-linear-gradient(#82db63,#5ba740);
+    background-image:-webkit-linear-gradient(#82db63,#5ba740);
+    background-image:linear-gradient(#82db63,#5ba740);
+    background-repeat:repeat-x;
+    border-color:#4a993e
+}
+.button.primary:active,
+.minibutton.primary:active {
+    background-color:#569e3d;
+    background-image:none;
+    border-color:#418737
+}
+.button.primary:disabled,.button.primary:disabled:hover,.button.primary.disabled,.button.primary.disabled:hover,.minibutton.primary:disabled,.minibutton.primary:disabled:hover,.button-group .primary.grouped-button:disabled:hover,.minibutton.primary.disabled,.minibutton.primary.disabled:hover,.button-group .primary.disabled.grouped-button:hover {
+    color:#fff;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+    background-color:#60b044;
+    background-image:-moz-linear-gradient(#8add6d,#60b044);
+    background-image:-webkit-linear-gradient(#8add6d,#60b044);
+    background-image:linear-gradient(#8add6d,#60b044);
+    background-repeat:repeat-x;
+    border-color:#74bb5a #74bb5a #509338
+}
+.button.danger,.minibutton.danger {
+    color:#900
+}
+.button.danger:hover,.minibutton.danger:hover,.button-group .danger.grouped-button:hover {
+    color:#fff;
+    text-shadow:0px -1px 0 rgba(0,0,0,0.3);
+    background-color:#b33630;
+    background-image:-moz-linear-gradient(#dc5f59,#b33630);
+    background-image:-webkit-linear-gradient(#dc5f59,#b33630);
+    background-image:linear-gradient(#dc5f59,#b33630);
+    background-repeat:repeat-x;
+    border-color:#cd504a
+}
+.button.danger:active,.minibutton.danger:active {
+    color:#fff;
+    background-color:#b33630;
+    background-image:none;
+    border-color:#9f312c
+}
+.button.danger:disabled,.button.danger:disabled:hover,.button.danger.disabled,.button.danger.disabled:hover,.minibutton.danger:disabled,.minibutton.danger:disabled:hover,.button-group .danger.grouped-button:disabled:hover,.minibutton.danger.disabled,.minibutton.danger.disabled:hover,.button-group .danger.disabled.grouped-button:hover {
+    color:#900;
+    text-shadow:0 1px 0 rgba(255,255,255,0.9);
+    background-color:#e1e1e1;
+    background-image:-moz-linear-gradient(#fff,#e1e1e1);
+    background-image:-webkit-linear-gradient(#fff,#e1e1e1);
+    background-image:linear-gradient(#fff,#e1e1e1);
+    background-repeat:repeat-x;
+    border-color:#c5c5c5
+}
+
+
+
+
+
+
+
+
+
+
+.button.skyblue,
+.button.skyblue:hover,
+.minibutton.skyblue,
+.minibutton.skyblue:hover{
+    color:#fff;
+    text-decoration:none;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+    background-color:#2181cf;
+    background-image:-moz-linear-gradient(#37a3eb,#2181cf);
+    background-image:-webkit-linear-gradient(#37a3eb,#2181cf);
+    background-image:linear-gradient(#37a3eb,#2181cf);
+    background-repeat:repeat-x;
+    border-color: #1c74b3;
+    border-top-color: #2c8ed1;
+    border-bottom-color: #0d5b97;
+
+    -webkit-box-shadow: 0 1px 0 #ddd,inset 0 1px 0 rgba(255,255,255,0.2);
+    box-shadow: 0 1px 0 #ddd,inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: rgba(0,0,0,0.2) 0 1px 0;
+    -webkit-text-shadow: rgba(0,0,0,0.2) 0 1px 0;
+    -moz-text-shadow: rgba(0,0,0,0.2) 0 1px 0;
+}
+.button.skyblue:hover,.minibutton.skyblue:hover{
+    background-position:0 -10px
+}
+.button.skyblue:active,.minibutton.skyblue:active {
+    background-image:-moz-linear-gradient(#2181cf,#37a3eb);
+    background-image:-webkit-linear-gradient(#2181cf,#37a3eb);
+    background-image:linear-gradient(#2181cf,#37a3eb);
+    background-color:#37a3eb;
+}
+.button.skyblue:disabled,.button.skyblue.disabled,.minibutton.skyblue:disabled,.minibutton.skyblue.disabled {
+    background-position:0 0;
+    background-color:#32687b;
+    background-image:-moz-linear-gradient(#448da6,#32687b);
+    background-image:-webkit-linear-gradient(#448da6,#32687b);
+    background-image:linear-gradient(#448da6,#32687b);
+    background-repeat:repeat-x
+}
+
+
+
+
+
+
+
+
+
+
+.button.blue,.button.blue:hover,.minibutton.blue,.minibutton.blue:hover,.button-group .blue.grouped-button:hover {
+    color:#fff;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+    background-color:#32687b;
+    background-image:-moz-linear-gradient(#448da6,#32687b);
+    background-image:-webkit-linear-gradient(#448da6,#32687b);
+    background-image:linear-gradient(#448da6,#32687b);
+    background-repeat:repeat-x;
+    border-color:#2b5969
+}
+.button.blue:hover,.minibutton.blue:hover,.button-group .blue.grouped-button:hover {
+    background-position:0 -10px
+}
+.button.blue:active,.minibutton.blue:active {
+    background-color:#32687b;
+    background-image:none
+}
+.button.blue:disabled,.button.blue.disabled,.minibutton.blue:disabled,.minibutton.blue.disabled {
+    background-position:0 0;
+    background-color:#32687b;
+    background-image:-moz-linear-gradient(#448da6,#32687b);
+    background-image:-webkit-linear-gradient(#448da6,#32687b);
+    background-image:linear-gradient(#448da6,#32687b);
+    background-repeat:repeat-x
+}
+.button img {
+    position:relative;
+    top:-1px;
+    margin-right:3px;
+    vertical-align:middle
+}
+
+.minibutton {
+    padding:0 10px;
+    line-height:24px;
+    box-shadow:none
+}
+.minibutton:hover .mini-icon-windows:before,
+.button-group .grouped-button:hover .mini-icon-windows:before {
+    background-position:-18px 0
+}
+.minibutton.selected,
+.context-menu-container.active .minibutton.switcher,
+.context-menu-container.active .context-button {
+    color:#fff;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.5);
+    background-color:#767676;
+    background-image:none;
+    border-color:#686868;
+    box-shadow:inset 0 3px 5px rgba(0,0,0,0.15)
+}
+.minibutton i {
+    font-weight:500;
+    font-style:normal;
+    opacity:.6
+}
+.minibutton.dark-grey,
+.minibutton.dark-grey.disabled:hover,
+.button-group .dark-grey.disabled.grouped-button:hover,
+.minibutton.dark-grey:disabled:hover,
+.button-group .dark-grey.grouped-button:disabled:hover {
+    color:#fff;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+    background-color:#6d6d6d;
+    background-image:-moz-linear-gradient(#8c8c8c,#6d6d6d);
+    background-image:-webkit-linear-gradient(#8c8c8c,#6d6d6d);
+    background-image:linear-gradient(#8c8c8c,#6d6d6d);
+    background-repeat:repeat-x;
+    border:1px solid #707070;
+    border-bottom-color:#595959
+}
+.minibutton.dark-grey:hover,
+.button-group .dark-grey.grouped-button:hover,
+.minibutton.dark-grey:active {
+    border-color:#585858
+}
+.minibutton.dark-grey:hover,
+.button-group .dark-grey.grouped-button:hover {
+    background-color:#545454;
+    background-image:-moz-linear-gradient(#737373,#545454);
+    background-image:-webkit-linear-gradient(#737373,#545454);
+    background-image:linear-gradient(#737373,#545454);
+    background-repeat:repeat-x
+}
+.minibutton.dark-grey:active {
+    background-color:#545454;
+    background-image:none;
+    border-color:#474747;
+    box-shadow:inset 0 3px 5px rgba(0,0,0,0.15)
+}
+input[type=text]+.minibutton {
+    margin-left:5px
+}
+.minibutton .mini-icon {
+    vertical-align:-2px;
+    margin-right:6px;
+    -moz-transition:none;
+    -webkit-transition:none;
+    -o-transition:color 0 ease-in;
+    transition:none
+}
+.minibutton.empty-icon .mini-icon {
+    margin-right:0
+}
+.minibutton .mini-icon-arr-right {
+    float:right;
+    margin-right:0;
+    margin-left:5px;
+    margin-top:4px
+}
+.minibutton.switcher {
+    padding:0;
+    height:24px;
+    line-height:1
+}
+.minibutton.switcher>span {
+    display:block;
+    position:relative;
+    padding:0 26px 0 10px;
+    line-height:24px;
+    height:24px
+}
+.minibutton.switcher>span:before {
+    content:"";
+    display:block;
+    position:absolute;
+    border:3px solid #000;
+    border-color:#000 transparent transparent;
+    top:10px;
+    right:7px;
+    width:0;
+    height:0
+}
+.minibutton.switcher>span:after {
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:18px;
+    display:block;
+    content:"";
+    width:1px;
+    background-color:#f9f9f9;
+    box-shadow:-1px 0 0 #e4e4e4
+}
+.minibutton.switcher:hover>span:after,.button-group .switcher.grouped-button:hover>span:after {
+    background-color:#6a9fd3;
+    box-shadow:-1px 0 0 #3c74ab
+}
+.minibutton.switcher:active>span:after {
+    background-color:#357ec8;
+    box-shadow:-1px 0 0 #25588c
+}
+.minibutton.switcher.with-image {
+    height:32px
+}
+.minibutton.switcher.with-image>span {
+    display:block;
+    height:32px;
+    line-height:32px;
+    padding:0 26px 0 6px
+}
+.minibutton.switcher.with-image>span:before {
+    top:14px
+}
+.minibutton.switcher.with-image img {
+    position:relative;
+    top:-1px;
+    margin-right:2px;
+    vertical-align:middle;
+    border-radius:2px
+}
+.minibutton.switcher.with-image.selected span:before,
+.context-menu-container.active .switcher.with-image.minibutton span:before,
+.context-menu-container.active .switcher.with-image.context-button span:before {
+    top:14px
+}
+.minibutton.switcher.selected>span:before,
+.context-menu-container.active .switcher.minibutton>span:before,
+.context-menu-container.active .switcher.context-button>span:before,
+.context-menu-container.active .minibutton.switcher>span:before {
+    top:10px;
+    border-color:#fff transparent transparent
+}
+.minibutton.switcher.selected>span:after,
+.context-menu-container.active .switcher.minibutton>span:after,
+.context-menu-container.active .switcher.context-button>span:after,
+.context-menu-container.active .minibutton.switcher>span:after {
+    background-color:#888;
+    box-shadow:-1px 0 0 #585858
+}
+.minibutton.switcher:hover>span:before,
+.button-group .switcher.grouped-button:hover>span:before,
+.context-menu-container.active .context-button:after {
+    border-color:#fff transparent transparent
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>金选集 金选周刊</title>
+    <meta name="Keywords" content="金选集,jinxuanji,jinxuanji.com 微信,公众号,手机,小程序,网站,产品目录,产品集,产品库,产品管理,产品手册,电子合同,电子说明书,素材库,图片库,图片包,样本,样品,展示,系统,开发,维护,更新,上架,代运营,推广,排版,编辑,客户,外贸,批发,分销,报价,价格表,表格,统计,对账" />
+    <meta name="Description" content="展示产品 触达客户，你需要的软件和人工服务。" />
+    <meta name="author" content="jinxuanji"/>
+    <meta name="copyright" content="jinxuanji.com"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="bookmark" href="favicon.ico" />
+    <link href="images/mini-logo.png" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" media="all" href="Styles/Common.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="Styles/Stylesheet.css" />
+    <link href="Styles/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="Styles/bass.css" />
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+</head>
+<body>
+<!--没有js时显示-->
+<noscript>
+    <div class="container">
+        <div style="color: red; display: block; text-align: center; background: none repeat scroll 0 0 #FFEBE8; border: 1px solid #DD3C10; margin: 10px auto 0; padding: 10px; text-align: center; line-height: 24px;">
+            由于需要JS才可以正常运行.请您开启JS支持.
+        </div>
+    </div>
+</noscript>
+
+<!--模糊遮罩-->
+<div id="me-blur">
+    <!--大屏幕导航栏-->
+    <div class="header container-j clearfix  mnv">
+        <div class="header-navs">
+            <div class="header-logo">
+                <h1><a href="index.html">jinxuanji</a></h1>
+            </div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="product.html">金选产品</a></li>
+                <li><a href="service.html">金选服务</a></li>
+                <li><a href="magazine.html">金选周刊</a></li>
+                <li><a href="about-us.html">关于我们</a></li>
+            </ul>
+            <div class="header-actions">
+                <a class="button" target="_blank" id="edit">联系我们</a>
+            </div>
+        </div>
+    </div>
+    <!--banner-->
+    <div class="magazine-banner">
+        <div>
+            <p class="p36 text_center"> 金选周刊</p>
+            <p class="p22 text_center">JINXUAN WEEKLY</p>
+        </div>
+    </div>
+    <!--订阅按钮-->
+    <div class=" booking container-j " >
+
+        <div class="cancel-button">
+            <a class="button" target="_blank" id="cancel-booking-button"">取消订阅</a>
+        </div>
+        <div class="booking-button">
+            <a class="button" target="_blank" id="booking-button">订阅</a>
+        </div>
+        <!--订阅按钮详情框-->
+        <div class="booking-content hidden" id="booking-content">
+            <a class="close" id="close-booking">
+                <img src="images/close.png">
+            </a>
+            <!--订阅内容-->
+            <div class="" id="booking-p">
+                <p class="p_dark-blue p18 f_weight_500 text_center">订阅金选周刊</p>
+                <p>订阅后您将每周收到我们为您推荐的金选文章，您也可以随时取消订阅</p>
+                <input type="text" placeholder="请输入您的邮箱地址" id="booking-email">
+
+                <a class="button" target="_blank" id="submit-booking">提交</a>
+            </div>
+            <!--订阅成功-->
+            <div class=" hidden" id="booking-succeed">
+                <p class="p_dark-blue p18 f_weight_500 text_center" >订阅金选周刊成功！</p>
+                <p class="text_center">金选周刊将不会再给您发送文章</p>
+            </div>
+        </div>
+        <!--退阅按钮详情框-->
+        <div class="booking-content hidden" id="booking-cancel">
+            <a class="close" id="close-cancel">
+                <img src="images/close.png">
+            </a>
+            <!--退订内容-->
+            <div class="" id="cancel-p">
+                <p class="p_dark-blue p18 f_weight_500 text_center">退订金选周刊</p>
+                <p>退订后您将不会再收到我们为您推荐的金选文章，感谢您的订阅！</p>
+                <input type="text" placeholder="请输入您的邮箱地址" id="cancel-email">
+
+                <a class="button" target="_blank" id="submit-cancel">提交</a>
+            </div>
+            <!--退订成功-->
+            <div class="hidden" id="cancel-succeed">
+                <p class="p_dark-blue p18 f_weight_500 text_center" >订阅金选周刊成功！</p>
+                <p class="text_center">金选周刊将不会再给您发送文章</p>
+            </div>
+        </div>
+
+    </div>
+    <!--周刊内容-->
+    <div class="article container-j clearfix " id="article-box">
+        <ul>
+        </ul>
+    </div>
+    <!--页码显示-->
+    <div class="container-j page">
+        <ul id="page_box">
+        </ul>
+    </div>
+    <!--footer-->
+    <div class=" sp">
+        <div class="footer clearfix">
+            <p class="footer-p">闽ICP备150019999号 &nbsp &nbsp &nbsp &nbsp &nbsp  <a href="/">关于我们</a></p>
+            <p class="footer-p">© 2015-2018 <a href="/">jinxuanji.com</a> All Rights Reserved.</p>
+        </div>
+
+    </div>
+</div>
+<!--遮罩-->
+
+<div class="hidden" id="me-cover">
+    <!--pop up-->
+    <div class="me-cover-content f_left clearfix">
+        <a id="close">
+            <img src="images/close.png">
+        </a>
+        <div>
+            <p class="title">方式1: 联系我们</p>
+            <ul>
+                <li>电话: <a>010－56863693</a></li>
+                <li>微信: <a>18901234520</a></li>
+            </ul>
+            <p class="title">方式2: 我们联系您</p>
+            <p class="last-p">您的联系方式：</p>
+            <div>
+                <input type="text" placeholder="电话／微信均可" id="text-box"/>
+                <input type="button" value="提交" id="submit">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--手机登录跳转-->
+<script language="javascript">
+    jumpToMobile('http://www.jinxuanji.com/mobile/magazine.html');
+</script>
+
+
+<script type="text/javascript">
+//获取订阅、退订
+    var bookingButton = document.getElementById("booking-button");
+    var cancelBookingButton = document.getElementById("cancel-booking-button");
+    var bookingContent = document.getElementById("booking-content");
+    var bookingCancel = document.getElementById("booking-cancel");
+    var closeBooking = document.getElementById("close-booking");
+    var closeCancel = document.getElementById("close-cancel");
+    var submitBooking = document.getElementById("submit-booking");
+    var submitCancel = document.getElementById("submit-cancel");
+    var bookingP = document.getElementById("booking-p");
+    var bookingSucceed = document.getElementById("booking-succeed");
+    var cancelP = document.getElementById("cancel-p");
+    var cancelSucceed = document.getElementById("cancel-succeed");
+    var bookingEmail = document.getElementById("booking-email");
+    var cancelEmail = document.getElementById("cancel-email");
+    var cover = document.getElementById("me-cover");
+    var closeBtn = document.getElementById("close");
+    var blur = document.getElementById("me-blur");
+    var submitM = document.getElementById("submit");
+    //联系我们
+    showCover(blur,cover,edit);
+    close(blur,cover,closeBtn);
+
+    //pop up  提交联系我们的数据
+    submitTextBox (submitM);
+
+//    订阅按钮
+    var booking = false;
+    var canceled= false;
+    showBooking(bookingButton,"booking-content",bookingContent,bookingCancel);
+    showBooking(cancelBookingButton,"booking-content",bookingCancel,bookingContent);
+
+
+//    提交按钮 Function
+    function submit(ele,hidd,show,allEle,close,content) {
+        var timer;
+        ele.addEventListener("click",function(e) {
+            hidd .className += " hidden";
+            show.className = "";
+            close.className +=' hidden';
+            var contentValue = content.value;
+            $.ajax({
+                url:"http://admin.jinxuanji.com/api/web/AddContact",
+                type:'POST',
+                data:{'':contentValue},
+                success:function (data) {
+                    console.log(data)
+                }
+            });
+            timer = setTimeout(
+                function () {
+                    allEle.className += " hidden";
+                    hidd.className ="";
+                    show.className += ' hidden';
+                    close.className ='close'
+                }, 3000);
+        })
+    };
+
+    submit(submitBooking,bookingP,bookingSucceed,bookingContent,closeBooking,bookingEmail);
+    submit(submitCancel,cancelP,cancelSucceed,bookingCancel,closeCancel,cancelEmail);
+
+//    关闭订阅框
+    closeBotton(bookingContent,closeBooking);
+    closeBotton(bookingCancel,closeCancel);
+
+    //    获取页数
+    var $pages;
+    var $pageBox = $("#page_box");
+    var pageAdd = '<li>'+
+                    '<input class="page-page" type="button" value="第一页">'+
+                  '</li>';
+    var totalPage;
+    $.ajax({
+        url:"http://admin.jinxuanji.com/api/web/GetNewsPage",
+        type:'POST',
+        data:{'':'null'},
+        success:function (data) {
+            data = JSON.parse(data);
+            console.log(data);
+            totalPage = data.PageCount;
+//            totalPage = 5;
+//            data.PageCount= 6;
+            if(data.PageCount <= 5){
+                for(var i =1; i<= data.PageCount; i++){
+    //                console.log(i);
+                    pageAdd += '<li>'+
+                        '<input class="page-page" type="button" value="'+i+'">'+
+                        '</li>';
+                }
+                pageAdd += '<li>'+
+                    '<input class="page-page" type="button" value="'+"最后一页"+'">'+
+                    '</li>';
+            }else{
+                pageAdd += '<li>'+
+                    '<input class="page-page" type="button" value="1">'+
+                    '</li>'+
+                    '<li>'+
+                    '<input class="page-page" type="button" value="2">'+
+                    '</li>'+
+                    '<li>'+
+                    '<input class="page-page" type="button" value="3">'+
+                    '</li>'+'<li>'+
+                    '<input class="page-page" type="button" value="4">'+
+                    '</li>'+'<li>'+
+                    '<input class="page-page" type="button" value="...">'+
+                    '</li>'+
+                    '<li>'+
+                    '<input class="page-page" type="button" value="'+"最后一页"+'">'+
+                    '</li>';
+            }
+            $pageBox.html(pageAdd);
+            articles = '<li class="f_left">'+
+                '<a class=" f_left" href="'+data.NewsList[0].DetailUrl+'">'+
+                //                                标题
+                '<p class=" f_weight_500 p18 article-name">'+data.NewsList[0].NewsTitle+'</p>'+
+                '<div class="summary clearfix f_left">'+
+                '<div class="left">'+
+                //                                摘要
+                '<p>'+data.NewsList[0].NewsSummary+'</p>'+
+                //                                时间
+                '<p class=" p_blue">'+data.NewsList[0].CreatedTime+'</p>'+
+                '</div>'+
+                //                                图片
+                '<img class="f_right block" src="'+data.NewsList[0].ShowImg+'">'+
+                '</div>'+
+                '</a>'+
+                '</li>';
+            $articleBox.html('');
+            $articleBox.html(articles);
+            $pages = $(".page-page");
+            console.log($pages);
+            clockPage();
+        }
+    });
+    //点击页数返回新页数刘列表
+
+
+        var $articleBox = $("#article-box");
+        var articles;
+        var lastPage = 1;
+        var val;
+        function clockPage() {
+
+
+            $pages.click(function (){
+                console.log(this.defaultValue);
+                if(this.defaultValue === "第一页"){
+                    val = lastPage-1
+                }else if(this.defaultValue === "最后一页"){
+                    val = totalPage;
+
+                }else if(this.defaultValue === "..."){
+                    val = lastPage + 4;
+                }else{
+                    val = this.value;
+                }
+
+                lastPage = val;
+                $.ajax({
+                    url:"http://admin.jinxuanji.com/api/web/GetNewsPage",
+                    type:'POST',
+                    data:{'':val},
+                    success:function (data) {
+                        console.log(JSON.parse(data));
+                        data = JSON.parse(data);
+                        for(var i = 1; i <= data.Total;i++){
+                            articles += '<li class="f_left">'+
+                                '<a class=" f_left" href="'+data.NewsList[i].DetailUrl+'">'+
+    //                                标题
+                                '<p class=" f_weight_500 p18 article-name">'+data.NewsList[i].NewsTitle+'</p>'+
+                                '<div class="summary clearfix f_left">'+
+                                '<div class="left">'+
+    //                                摘要
+                                '<p>'+data.NewsList[i].NewsSummary+'</p>'+
+    //                                时间
+                                '<p class=" p_blue">'+data.NewsList[i].CreatedTime+'</p>'+
+                                '</div>'+
+    //                                图片
+                                '<img class="f_right block" src="'+data.NewsList[i].ShowImg+'">'+
+                                '</div>'+
+                                '</a>'+
+                                '</li>';
+                        }
+                            $articleBox.html('');
+                            $articleBox.html(articles);
+
+                         //页码调整
+                            //  如果页数大于5
+                            if(data.PageCount > 5 && (val+3) < data.PageCount){
+                                pageAdd = '<li>'+
+                                    '<input class="page-page" type="button" value="第一页">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-1)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+val+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val+1)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val+2)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+'...'+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+'最后一页'+'">'+
+                                    '</li>';
+
+                            }else if(data.PageCount > 5 && (val+3) == data.PageCount){
+                                pageAdd = '<li>'+
+                                    '<input class="page-page" type="button" value="第一页">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-1)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+val+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val+1)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val+2)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val+3)+'">'+
+                                    '</li>';
+
+                            }else if(data.PageCount > 5 && (val+2) == data.PageCount){
+                                pageAdd = '<li>'+
+                                    '<input class="page-page" type="button" value="第一页">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-2)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-1)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+val+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val+1)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val+2)+'">'+
+                                    '</li>';
+
+                            }else if(data.PageCount > 5 && (val+1) == data.PageCount){
+                                pageAdd = '<li>'+
+                                    '<input class="page-page" type="button" value="第一页">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-3)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-2)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-1)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+val+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val+1)+'">'+
+                                    '</li>';
+                            }else if(data.PageCount > 5 && val == data.PageCount){
+                                pageAdd = '<li>'+
+                                    '<input class="page-page" type="button" value="第一页">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-4)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-3)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-2)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+(val-1)+'">'+
+                                    '</li>'+
+                                    '<li>'+
+                                    '<input class="page-page" type="button" value="'+val+'">'+
+                                    '</li>';
+                            }else if(data.PageCount < 5 ){
+                                pageAdd = '<li>'+
+                                    '<input class="page-page" type="button" value="第一页">'+
+                                    '</li>';
+                                    for(var k =1;k<=data.PageCount ;k++){
+                                        pageAdd += '<li>'+
+                                            '<input class="page-page" type="button" value="'+ k +'">'+
+                                            '</li>';
+                                    }
+                            }
+                            pageAdd += '<li>'+
+                                '<input class ="page-page" type="button" value="最后一页">'+
+                                '</li>';
+                            $pageBox.html('');
+                            $pageBox.html(pageAdd);
+                        $pages = $(".page-page");
+                        clockPage();
+                    }
+                });
+            })
+        }
+</script>
+
+</body>
+</html>
+

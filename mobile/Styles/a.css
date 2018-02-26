@@ -1,0 +1,9 @@
+
+html > body {background: #FFF url(../images/sbg.gif) center top repeat-x;}
+@media screen and (max-width: 930px){
+    html > body {background: #FFF }
+
+}
+html{
+    width: 100% !important;
+}
